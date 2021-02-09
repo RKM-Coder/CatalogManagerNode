@@ -1,0 +1,2 @@
+# CatalogManagerNode
+Catalog Manager Node
