@@ -16,6 +16,8 @@ app.use(express.static('uploads'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+require('./app/routes')(app);
+
 const onServerStart = () => {
     const ENVIROINMENT = process.env.NODE_ENV || 'development';
     const message = `Server Listening On Port ${PORT}, ENVIROINMENT=${ENVIROINMENT}`;

@@ -2,7 +2,7 @@
 
 const config = {
     db:{
-        uri: ''
+        uri: 'mongodb://localhost:27017/catalog_db'
     },
 
     // JWT Secret
