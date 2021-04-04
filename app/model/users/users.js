@@ -6,15 +6,14 @@ const options = {
     timestamps: true
 };
 
-
-const getRequiredFiledMessage = (filed) => {
+const getRequiredFieldMessage = (filed) => {
     const message = `${filed} Should Not Be Empty`;
     return [true, message];
 };
 
 const UserSchema = new Schema({
-    name: { type: String, required: getRequiredFiledMessage('Name') },
-    email: { type: String, required: getRequiredFiledMessage('Email'), trim: true, unique: true },
+    name: { type: String, required: getRequiredFieldMessage('Name') },
+    email: { type: String, required: getRequiredFieldMessage('Email'), trim: true, unique: true },
     mobile: { type: String, default: '000', trim: true },
     password: { type: String, default: '', trim: true },
     appID: { type: String, default: '', trim: true },
