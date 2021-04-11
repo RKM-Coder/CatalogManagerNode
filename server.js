@@ -8,6 +8,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
+const {db} = require('./app/model');
 
 app.use(morgan('tiny'));
 app.use(cors());
@@ -16,7 +17,7 @@ app.use(express.static('uploads'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-require('./app/routes')(app);
+require('./app/router')(app);
 
 const onServerStart = () => {
     const ENVIROINMENT = process.env.NODE_ENV || 'development';
