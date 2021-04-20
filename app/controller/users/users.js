@@ -49,7 +49,7 @@ const getUserByRoleId = async (roleId) =>{
         let query = Object.assign({},{
             roleId: roleId
         });
-        const result = await User.findOne(query);
+        const result = await User.find(query);
         return result;
     } catch(error) {
         throw error;
