@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use(express.static('uploads'));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(bodyParser.json());//deprecated
 
 require('./app/router')(app);
 
